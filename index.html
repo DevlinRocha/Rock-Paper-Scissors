@@ -16,28 +16,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script>
-            function computerPlay() {
-                possibleChoices = ["Rock", "Paper", "Scissors"];
-                const computerSelection = Math.floor(Math.random() * possibleChoices.length);
-                return possibleChoices[computerSelection]
-            }
-            const playerSelection = input("Rock, paper, or scissors?").toUpperCase();
-            const computerSelection = computerPlay().toUpperCase();
-
-            function playRound(playerSelection, computerSelection) {
-                const playerSelection = playerSelection.toUpperCase();
-                const computerSelection = computerSelection.toUpperCase();
-                "ROCK" > "SCISSORS";
-                "PAPER" > "ROCK";
-                "SCISSORS" > "PAPER";
-                if (playerSelection > computerSelection) {
-                    return "Congratulations, you win!";
-                } else {
-                    return "Sorry, you lose.";
-                }
-            }
-        </script>
+        <script src="scripts.js"></script>
         <title>Rock paper scissors</title>
     </head>
 </html>
