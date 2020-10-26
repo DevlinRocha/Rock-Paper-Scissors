@@ -78,6 +78,8 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
+    playerScore = 0;
+    computerScore = 0;
     console.log("Starting a new game...");
     for (i = 0; i < 5; i++) {
         let [computerSelection, playerSelection] = bothChoose();
@@ -85,13 +87,16 @@ function game() {
         console.log(results);
     }
     if (playerScore > computerScore) {
-        return `Congratulations! You won the game!
-        Final score
-        Player: ${playerScore} Computer: ${computerScore}`
+        alert(`Congratulations! You won the game!
+        Final score:
+        Player: ${playerScore} Computer: ${computerScore}`);
+    } else  if (computerScore > playerScore) {
+        alert(`Too bad! You lost the game.
+        Final score:
+        Player: ${playerScore} Computer: ${computerScore}`);
     } else {
-        return `Too bad! You lost the game.
-        Final score
-        Player: ${playerScore} Computer: ${computerScore}`
+        alert(`Tie game! No winner.
+        Final score:
+        Player ${playerScore} Computer: ${computerScore}`);
     }
-    console.log("Player Score: " + playerScore + " Computer Score: " + computerScore);
 }
