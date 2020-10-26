@@ -52,28 +52,21 @@ function playRound(playerSelection, computerSelection) {
         case playerSelection === "ROCK" && computerSelection === "SCISSORS":
             playerScore++;
             return "Rock smashes scissors! You win!"
-            break;
         case playerSelection === "PAPER" && computerSelection === "ROCK":
             playerScore++;
             return "Paper covers rock! You win!"
-            break;
         case playerSelection === "SCISSORS" && computerSelection === "PAPER":
             playerScore++;
             return "Scissors cuts paper! You win!"
-            break;
-        
         case playerSelection === "ROCK" && computerSelection === "PAPER":
             computerScore++;
             return "Paper covers rock! You lose."
-            break;
         case playerSelection === "PAPER" && computerSelection === "SCISSORS":
             computerScore++;
             return "Scissors cut paper! You lose."
-            break;
         case playerSelection === "SCISSORS" && computerSelection === "ROCK":
             computerScore++;
             return "Rock smashes scissors! You lose."
-            break;
     }
 }
 
