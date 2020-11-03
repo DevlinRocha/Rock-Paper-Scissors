@@ -102,7 +102,7 @@ scissorsButton.addEventListener('click', (e) => {
 })
 
 const resultsText = document.createElement('span');
-results.appendChild(resultsText);
+results.insertBefore(resultsText, score);
 
 const playerResults = document.querySelector('#player-results');
 playerResults.textContent = `Player's Score: ${playerScore}`;
