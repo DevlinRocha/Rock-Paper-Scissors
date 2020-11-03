@@ -1,21 +1,9 @@
-/*    
-    Begin with a function called computerPlay that randomly returns either 'Rock', 'Paper', or 'Scissors'.
-    
-    A new round begins with a function taking inputs from the players selection and the computers selection
-    Return a string declaring the winner of the round, such as: "You lose! Paper beats rock"
-
-    1.) Make sure the function is case insensitive so it takes all variations of user inputs.
-    2.) Make sure results are returned, console.log() is for testing purposes only
-
-    Another function called game() uses the previous function inside of this one to play a 5 round game that keeps score and reports a winner or loser at the end
-
-    1.) Use console.log() to report the results of each round at the end
-    2.) Use prompt() to get input from the user
-    3.) Feel free to re-work previous functions or create more "helper" functions if it would be useful
-*/
-
 let playerScore = 0;
 let computerScore = 0;
+
+
+
+//  Functions
 
 function computerPlay() {
     const possibleChoices = ["Rock", "Paper", "Scissors"];
@@ -53,36 +41,43 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-/*
-function game() {
-    playerScore = 0;
-    computerScore = 0;
-    console.log("Starting a new game...");
-    for (i = 0; i < 5; i++) {
-        let [computerSelection, playerSelection] = bothChoose();
-        results = playRound(playerSelection, computerSelection);
-        console.log(results);
-    }
-    if (playerScore > computerScore) {
+function winnerCheck(playerScore, computerScore) {
+    if (playerScore === 5) {
         alert(`Congratulations! You won the game!
         Final score:
-        Player: ${playerScore} Computer: ${computerScore}`);
-    } else  if (computerScore > playerScore) {
+        Player: ${playerScore}
+        Computer: ${computerScore}`);
+        playerScore = 0;
+        computerScore = 0;
+        console.log(playerScore);
+        console.log(computerScore);
+        return true;
+    } else if (computerScore === 5) {
         alert(`Too bad! You lost the game.
         Final score:
-        Player: ${playerScore} Computer: ${computerScore}`);
-    } else {
-        alert(`Tie game! No winner.
-        Final score:
-        Player ${playerScore} Computer: ${computerScore}`);
+        Player score: ${playerScore}
+        Computer score: ${computerScore}`);
+        playerScore = 0;
+        computerScore = 0;
+        console.log(playerScore);
+        console.log(computerScore);
+        return true;
     }
 }
-*/
+
+function scoreReset() {
+    return playerScore = 0, computerScore = 0;
+}
 
 function scoreUpdate() {
     playerResults.textContent = `Player's Score: ${playerScore}`;
     computerResults.textContent = `Computer's Score: ${computerScore}`;
+    winnerCheck(playerScore, computerScore) ? scoreReset() : console.log('hi');
 }
+
+
+
+//  DOM Manipulation
 
 const body = document.querySelector('body');
 const results = document.querySelector('#results');
@@ -114,6 +109,3 @@ playerResults.textContent = `Player's Score: ${playerScore}`;
 
 const computerResults = document.querySelector('#computer-results')
 computerResults.textContent = `Computer's Score: ${computerScore}`;
-
-//const resultsScore = document.createElement('p');
-//results.appendChild(restultsScore);
