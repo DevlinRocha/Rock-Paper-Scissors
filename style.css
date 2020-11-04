@@ -46,6 +46,7 @@ button.night-mode {
 #score-title {
     align-self: center;
     margin: 0px 0px 50px 0px;
+    font-size: 42px;
 }
 
 #player-score {
@@ -68,7 +69,11 @@ button.night-mode {
 
 #results-title {
     margin: 0px 0px 50px 0px;
-    font-size: 25px;
+    font-size: 37px;
+}
+
+#results-text {
+    font-size: 21px;
 }
 
 #buttons {
