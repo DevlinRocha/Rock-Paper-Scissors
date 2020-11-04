@@ -1,8 +1,6 @@
 let playerScore = 0;
 let computerScore = 0;
 
-
-
 //  Functions
 
 function computerPlay() {
@@ -55,8 +53,8 @@ function winnerCheck(playerScore, computerScore) {
     } else if (computerScore === 5) {
         alert(`Too bad! You lost the game.
         Final score:
-        Player score: ${playerScore}
-        Computer score: ${computerScore}`);
+        Player: ${playerScore}
+        Computer: ${computerScore}`);
         playerScore = 0;
         computerScore = 0;
         console.log(playerScore);
@@ -70,8 +68,8 @@ function scoreReset() {
 }
 
 function scoreUpdate() {
-    playerResults.textContent = `Player's Score: ${playerScore}`;
-    computerResults.textContent = `Computer's Score: ${computerScore}`;
+    playerResults.textContent = `Player: ${playerScore}`;
+    computerResults.textContent = `Computer: ${computerScore}`;
     winnerCheck(playerScore, computerScore) ? scoreReset() : console.log('hi');
 }
 
@@ -103,14 +101,13 @@ scissorsButton.addEventListener('click', (e) => {
     scoreUpdate();
 })
 
-const resultsText = document.createElement('span');
-results.insertBefore(resultsText, score);
+const resultsText = document.querySelector('#results-text');
 
-const playerResults = document.querySelector('#player-results');
-playerResults.textContent = `Player's Score: ${playerScore}`;
+const playerResults = document.querySelector('#player-score');
+playerResults.textContent = `Player: ${playerScore}`;
 
-const computerResults = document.querySelector('#computer-results')
-computerResults.textContent = `Computer's Score: ${computerScore}`;
+const computerResults = document.querySelector('#computer-score')
+computerResults.textContent = `Computer: ${computerScore}`;
 
 
 
@@ -121,7 +118,10 @@ function nightMode() {
     rockButton.classList.toggle('night-mode');
     paperButton.classList.toggle('night-mode');
     scissorsButton.classList.toggle('night-mode');
+    nightModeButton.classList.toggle('night-mode');
 }
 
 const nightModeButton = document.querySelector('#night-mode-button')
 nightModeButton.addEventListener('click', nightMode)
+
+nightMode();

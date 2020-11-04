@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html class="night-mode">
     <head>
+        <link rel="reset" href="reset.css">
         <link rel="stylesheet" href="style.css">
         <title>Rock paper scissors</title>
     </head>
     <body>
         <main id="main">
             <h1 id="title">Rock paper scissors</h1>
+            <div id="score">
+                <h2 id="score-title">SCORE:</h2>
+                <span id="player-score"></span>
+                <span id="computer-score"></span>
+            </div>
             <div id="results">
-                <h2 id="results-title">RESULTS:</h2>
-                <div id="score">
-                    <span id="player-results"></span>
-                    <span id="computer-results"></span>
-                </div>
+                <h3 id="results-title">RESULTS:</h3>
+                <span id="results-text">Click a button to begin!</span>
             </div>
             <div id="buttons">
-                <button id="rock-button" class="button night-mode">Rock</button>
-                <button id="paper-button" class="button night-mode">Paper</button>
-                <button id="scissors-button" class="button night-mode">Scissors</button>
+                <button id="rock-button" class="play-button night-mode">Rock</button>
+                <button id="paper-button" class="play-button night-mode">Paper</button>
+                <button id="scissors-button" class="play-button night-mode">Scissors</button>
             </div>
-            <button id="night-mode-button" class="button night-mode">NIGHT MODE</button>
+            <button id="night-mode-button" class="night-mode-button night-mode">NIGHT MODE</button>
         </main>
     </body>
     <script src ="scripts.js"></script>
