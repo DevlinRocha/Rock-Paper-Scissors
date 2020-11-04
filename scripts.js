@@ -79,9 +79,11 @@ function scoreUpdate() {
 
 //  DOM Manipulation
 
+const html = document.querySelector('html');
 const body = document.querySelector('body');
 const results = document.querySelector('#results');
 const score = document.querySelector('#score');
+const button = document.querySelectorAll('button');
 
 const rockButton = document.querySelector('#rock-button')
 rockButton.addEventListener('click', (e) => {
@@ -109,3 +111,17 @@ playerResults.textContent = `Player's Score: ${playerScore}`;
 
 const computerResults = document.querySelector('#computer-results')
 computerResults.textContent = `Computer's Score: ${computerScore}`;
+
+
+
+//  Night-Mode
+
+function nightMode() {
+    html.classList.toggle('night-mode');
+    rockButton.classList.toggle('night-mode');
+    paperButton.classList.toggle('night-mode');
+    scissorsButton.classList.toggle('night-mode');
+}
+
+const nightModeButton = document.querySelector('#night-mode-button')
+nightModeButton.addEventListener('click', nightMode)
