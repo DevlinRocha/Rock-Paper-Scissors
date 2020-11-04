@@ -8,8 +8,7 @@
     ". title ."
     ". results ."
     ". buttons .";
-    justify-items: center;
-    align-items: center;
+    justify-content: center;
 }
 
 #title {
@@ -19,15 +18,20 @@
 
 #results {
     grid-area: results;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #buttons {
     grid-area: buttons;
+    justify-self: center;
+    margin: 25px;
+    min-width: 295px;
 }
 
 #resultsTitle {
-    justify-self: center;
-    align-self: center;
+    justify-self:center;
 }
 
 .button {
