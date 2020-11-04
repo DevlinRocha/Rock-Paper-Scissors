@@ -31,6 +31,7 @@
 
 #buttons {
     grid-area: buttons;
+    display: flex;
     justify-self: center;
     margin: 25px;
     min-width: 295px;
@@ -38,8 +39,10 @@
 
 .button {
     border: 3px solid black;
-    font-size: 25px;
+    font-size: 17px;
     color: white;
+    margin: 10px;
+    min-width: 100px;
 }
 
 .button:hover {
