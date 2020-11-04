@@ -14,6 +14,8 @@
 #title {
     grid-area: title;
     justify-self: center;
+    min-width: 360px;
+    margin-bottom: 25px;
 }
 
 #results {
@@ -23,6 +25,10 @@
     align-items: center;
 }
 
+#resultsTitle {
+    justify-self:center;
+}
+
 #buttons {
     grid-area: buttons;
     justify-self: center;
@@ -30,11 +36,25 @@
     min-width: 295px;
 }
 
-#resultsTitle {
-    justify-self:center;
-}
-
 .button {
     border: 3px solid black;
     font-size: 25px;
+    color: white;
+}
+
+.button:hover {
+    transform: scale(1.1);
+    border-color: yellow;
+}
+
+#rock-button {
+    background-color: red;
+}
+
+#paper-button {
+    background-color: blue;
+}
+
+#scissors-button {
+    background-color: green;
 }
