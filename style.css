@@ -45,9 +45,9 @@ body {
     max-height: 100vh;
     display: grid;
     grid-template-rows: 75px 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas:
-    "header header header"
+    ". title night"
     ". score ."
     ". results ."
     "buttons buttons buttons";
@@ -64,6 +64,7 @@ body {
 }
 
 #title {
+    grid-area: title;
     justify-self: center;
     align-self: center;
     padding: 0px 0px 0px 50px;
@@ -72,6 +73,7 @@ body {
 }
 
 #night-mode-button {
+    grid-area: night;
     justify-self: center;
     align-self: center;
     position: fixed;
@@ -93,6 +95,7 @@ body {
     margin: 0px 0px 0px 0px;
     font-size: 42px;
     justify-content: center;
+    align-items: center;
 }
 
 #score-title {
@@ -104,11 +107,11 @@ body {
 }
 
 #player-score {
-    margin: 0px 0px 25px 75px;
+    margin: 0px 0px 25px 0px;
 }
 
 #computer-score {
-    margin: 0px 0px 0px 75px;
+    margin: 0px 0px 0px 0px;
 }
 
 #results {
