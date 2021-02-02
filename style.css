@@ -22,6 +22,19 @@ body {
     color: lightgray;
 }
 
+#main {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 100px 1fr 1fr 1fr;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas:
+    ". title night"
+    ". score ."
+    ". results ."
+    "buttons buttons buttons";
+}
+
 .play-button.night-mode {
     border-color: lightgray;
 }
@@ -48,29 +61,6 @@ body {
 .play-button:hover {
     transform: scale(1.1);
     border-color: yellow;
-}
-
-#main {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-rows: 100px 1fr 1fr 1fr;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-areas:
-    ". title night"
-    ". score ."
-    ". results ."
-    "buttons buttons buttons";
-}
-
-#header {
-    grid-area: header;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    padding: 0;
 }
 
 #title {
@@ -111,9 +101,16 @@ body {
 #score-title {
     align-self: center;
     justify-self: flex-end;
-    padding: 50px 0px 0px 0px;
-    margin: 0px 0px 50px 0px;
+    padding: 50px 0 0 0;
+    margin: 0 0 25px;
     font-size: 50px;
+}
+
+#scores {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #player-score {
@@ -129,11 +126,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
+    justify-content: center;
+    align-content: center;
+    margin: 25px 0;
 }
 
 #results-title {
-    margin: 0px 0px 50px 0px;
+    margin: 0 0 25px;
     font-size: 42px;
 }
 
