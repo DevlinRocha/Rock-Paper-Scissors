@@ -1,11 +1,13 @@
 html {
     font-family: san -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    max-width: 100vw;
-    max-height: 100vh;
+    height: 100%;
+    width: 100%;
 }
 
 body {
-    margin: 0px 0px 0px 0px;
+    height: 100%;
+    width: 100%;
+    margin: 0;
 }
 
 .night-mode {
@@ -42,8 +44,8 @@ body {
 }
 
 #main {
-    max-width: 100vw;
-    max-height: 100vh;
+    width: 100%;
+    height: 100%;
     display: grid;
     grid-template-rows: 100px 1fr 1fr 1fr;
     grid-template-columns: 1fr 3fr 1fr;
@@ -56,21 +58,23 @@ body {
 
 #header {
     grid-area: header;
-    max-width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-content: center;
-    padding: 0px 0px 0px 0px;
+    padding: 0;
 }
 
 #title {
     grid-area: title;
+    display: flex;
+    flex-flow: row nowrap;
     justify-self: center;
     align-self: center;
     padding: 0px;
     font-size: 50px;
-    margin: 50px 0px 0px 0px;
+    margin: 50px 0 0 0;
     max-width: 100vw;
 }
 
@@ -83,15 +87,15 @@ body {
     width: 115px;
     height: 42px;
     font-size: 13px;
-    margin: 0px 0px 0px 42px;
-    padding: 0px;
+    margin: 0 0 0 42px;
+    padding: 0;
 }
 
 #score {
     grid-area: score;
     display: flex;
     flex-direction: column;
-    margin: 0px 0px 0px 0px;
+    margin: 0;
     font-size: 42px;
     justify-content: center;
     align-items: center;
@@ -110,7 +114,7 @@ body {
 }
 
 #computer-score {
-    margin: 0px 0px 0px 0px;
+    margin: 0;
 }
 
 #results {
@@ -135,9 +139,9 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    max-width: 100vw;
+    width: 100%;
     min-height: 250px;
-    margin: 0px 25px 25px 25px;
+    margin: 0;
 }
 
 
